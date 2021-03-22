@@ -285,12 +285,30 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #0D0D2B;
 }
 
 .header {
   background-color: transparent;
   padding-top: 60px;
+  padding-bottom: 15px;
   margin-bottom: 51px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.header.scroll {
+  background-color: #08081b;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-top: 15px;
 }
 
 .header__body {
@@ -312,6 +330,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.one {
+  padding-top: 110px;
 }
 
 .one__body {
@@ -400,6 +422,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #0D0D2B;
 }
 
 .two__cards {
@@ -750,6 +773,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #2B076E;
 }
 
 .five__title {
@@ -807,6 +831,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #0D0D2B;
 }
 
 .six__body {

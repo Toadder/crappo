@@ -14,3 +14,14 @@ testWebP(function (support) {
     document.querySelector("body").classList.add("no-webp");
   }
 });
+
+let header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 90) {
+    header.classList.add('scroll');
+  }
+  else {
+    header.classList.remove('scroll');
+  }
+});
