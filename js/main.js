@@ -15,13 +15,41 @@ testWebP(function (support) {
   }
 });
 
+// HEADER SCROLL
 let header = document.querySelector('.header');
 
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 90) {
-    header.classList.add('scroll');
-  }
-  else {
-    header.classList.remove('scroll');
-  }
-});
+if(!window.matchMedia('(max-width: 768px)').matches){
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 90) {
+      header.classList.add('scroll');
+    }
+    else {
+      header.classList.remove('scroll');
+    }
+  });
+}
+
+
+
+// PRELOADER
+document.body.onload = () => {
+
+    setTimeout(() => {
+      let preloader = document.querySelector('.preloader');
+
+      if (!preloader.classList.contains('loaded')) {
+        preloader.classList.add('loaded');
+        document.body.classList.remove('lock');
+      }
+    }, 1000);
+
+}
+
+// BURGER
+let headerBurger = document.querySelector('.header__burger');
+let headerMenu = document.querySelector('.nav');
+
+headerBurger.addEventListener('click', () => {
+  headerMenu.classList.toggle('active');
+  headerBurger.classList.toggle('active');
+})
